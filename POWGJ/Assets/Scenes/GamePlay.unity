@@ -178,7 +178,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012514070086, guid: 6215f1bcb7e92bd43b9e464186d8ae0c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6215f1bcb7e92bd43b9e464186d8ae0c, type: 2}
@@ -535,7 +535,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1001 &331950615
 Prefab:
   m_ObjectHideFlags: 0
@@ -645,6 +645,7 @@ GameObject:
   - 92: {fileID: 413031577}
   - 124: {fileID: 413031576}
   - 81: {fileID: 413031575}
+  - 114: {fileID: 413031580}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -714,12 +715,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 413031574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -30.30303}
-  m_LocalScale: {x: 3.030303, y: 3.030303, z: 3.030303}
+  m_LocalPosition: {x: -12.02, y: -21.96, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 837248096}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &413031580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 413031574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9c1bb5431e4e249a579e1f32b9a955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &416937356 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012514070086, guid: 6215f1bcb7e92bd43b9e464186d8ae0c,
@@ -980,7 +992,7 @@ Transform:
   - {fileID: 1714401029}
   - {fileID: 1530003}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!4 &620866319 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012514070086, guid: 6215f1bcb7e92bd43b9e464186d8ae0c,
@@ -1245,7 +1257,7 @@ GameObject:
   - 58: {fileID: 837248098}
   - 61: {fileID: 837248093}
   m_Layer: 0
-  m_Name: Ludek
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1281,7 +1293,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &837248095
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1325,10 +1337,9 @@ Transform:
   m_LocalPosition: {x: -12.02, y: -21.96, z: 0}
   m_LocalScale: {x: 0.33, y: 0.33, z: 0.33}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 413031579}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!114 &837248097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,7 +1459,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012514070086, guid: 6215f1bcb7e92bd43b9e464186d8ae0c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1000010888087034, guid: 6215f1bcb7e92bd43b9e464186d8ae0c, type: 2}
       propertyPath: m_Name
@@ -1494,7 +1505,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012514070086, guid: 6215f1bcb7e92bd43b9e464186d8ae0c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1000010888087034, guid: 6215f1bcb7e92bd43b9e464186d8ae0c, type: 2}
       propertyPath: m_Name
@@ -1973,7 +1984,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!68 &1397967156
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2597,7 +2608,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012514070086, guid: 6215f1bcb7e92bd43b9e464186d8ae0c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1000010888087034, guid: 6215f1bcb7e92bd43b9e464186d8ae0c, type: 2}
       propertyPath: m_Name
