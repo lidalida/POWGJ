@@ -19,13 +19,11 @@ public class PlayerController : MonoBehaviour {
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(speed * Mathf.Sin(Mathf.Deg2Rad * GetComponent<Rigidbody2D>().rotation * (-1)), speed * Mathf.Cos(Mathf.Deg2Rad * GetComponent<Rigidbody2D>().rotation * (-1)));
             GetComponent<Animator>().SetBool("IsMoving", true);
-            Debug.Log("true");
         }
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             GetComponent<Animator>().SetBool("IsMoving", false);
-            Debug.Log("false");
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
