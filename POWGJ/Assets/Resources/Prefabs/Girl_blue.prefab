@@ -25,7 +25,7 @@ GameObject:
   - 61: {fileID: 61000013624087106}
   - 95: {fileID: 95000012437253576}
   m_Layer: 0
-  m_Name: Character 1
+  m_Name: Girl_blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010290457176}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: 6a17e1bfec852af4490df0de2549558b, type: 2}
   m_CullingMode: 0

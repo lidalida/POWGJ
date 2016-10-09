@@ -23,8 +23,9 @@ GameObject:
   - 50: {fileID: 50000014245266986}
   - 58: {fileID: 58000014130806124}
   - 61: {fileID: 61000013635307904}
+  - 95: {fileID: 95000011727642880}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,6 +89,23 @@ BoxCollider2D:
   m_Offset: {x: -0.04, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.87, y: 0.3}
+--- !u!95 &95000011727642880
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010951267880}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b441755e5308dbd48a22584b63287fb1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &212000011847361512
 SpriteRenderer:
   m_ObjectHideFlags: 1
