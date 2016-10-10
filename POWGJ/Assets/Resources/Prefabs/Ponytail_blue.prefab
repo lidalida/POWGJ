@@ -24,6 +24,7 @@ GameObject:
   - 58: {fileID: 58000011475308714}
   - 61: {fileID: 61000014188220272}
   - 95: {fileID: 95000010335131666}
+  - 114: {fileID: 114000012708320270}
   m_Layer: 0
   m_Name: Ponytail_blue
   m_TagString: Untagged
@@ -106,6 +107,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000012708320270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014278068172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9648cca22c9dbe47a4e003ab93f83c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000011888433308
 SpriteRenderer:
   m_ObjectHideFlags: 1

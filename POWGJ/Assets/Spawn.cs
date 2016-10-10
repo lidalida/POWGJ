@@ -1,26 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Spawn : MonoBehaviour {
 
-    GameObject character;
-    GameObject spawned, spawned2;
-    
+    GameObject spawned;
+    List<GameObject> list;
+    string[] prefabs_names = {"Afro_green", "Afro_red", "Boy1_brown", "Boy1_green", "Boy2_blue", "Boy2_green", "Boy2_white", "Girl_blue", "Girl_pink", "Ponytail_blue", "Ponytail_orange", "Professor"};
+    public int people_number = 0;
+    public int max_people_number=1000;
 	// Use this for initialization
 	void Start () {
-        //character = GameObject.Find("Character");
-        Vector3 pos = new Vector3(-10, -24, 0);
-        Vector3 pos2 = new Vector3(-10, -26, 0);
+        list = new List<GameObject>();
 
-       /* spawned = (GameObject)Instantiate(character, pos, Quaternion.identity);
-        spawned.AddComponent<Animator>();
-        spawned.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Walking") as RuntimeAnimatorController;
-        AnimatorOverrideController overrideController = Resources.Load("Walking_afro_green") as AnimatorOverrideController;
-        spawned.GetComponent<Animator>().runtimeAnimatorController = overrideController;*/
-        spawned = (GameObject)Instantiate(Resources.Load("Prefabs/Professor"), pos, Quaternion.identity);
-        spawned2 = (GameObject)Instantiate(Resources.Load("Prefabs/Professor"), pos2, Quaternion.identity);
-        spawned2.GetComponent<Animator>().SetBool("IsMoving", true);
-
+        for (int i = 0; i < 100; i++)
+            SingleSpawn();
+        
+        InvokeRepeating("SingleSpawn", 0.1f, 3f);
+             
 
         
 	
@@ -28,6 +25,65 @@ public class Spawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+     
 	
 	}
+
+    void SingleSpawn()
+    {
+        float rnd = Random.value;
+        Vector3 pos;
+        if (people_number < max_people_number)
+        {
+            if (rnd < 0.2f)
+            {
+                //losuj tam gdzie rzadko
+                pos = new Vector3(Random.Range(-97, 92), Random.Range(-28, -22), 0);
+            }
+            else if(rnd>=0.2f && rnd<0.25f)
+            {
+                pos = new Vector3(Random.Range(90, 92), Random.Range(-9, 14), 0);
+
+            }
+            else if (rnd >= 0.25f && rnd < 0.3f)
+            {
+                pos = new Vector3(Random.Range(-92, -90), Random.Range(-9, 14), 0);
+
+            }
+            else if (rnd >= 0.3f && rnd < 0.35f)
+            {
+                pos = new Vector3(Random.Range(30, 31), Random.Range(-9, 14), 0);
+
+            }
+            else if (rnd >= 0.35f && rnd < 0.4f)
+            {
+                pos = new Vector3(Random.Range(-31, -30), Random.Range(-9, 14), 0);
+
+            }
+            else if (rnd >= 0.4f && rnd < 0.45f)
+            {
+                pos = new Vector3(Random.Range(55, 66), Random.Range(-47, -30), 0);
+
+            }
+            else if (rnd >= 0.45f && rnd < 0.5f)
+            {
+                pos = new Vector3(Random.Range(-66, -55), Random.Range(-47, -30), 0);
+
+            }
+            else
+            {
+                //losuj tam gdzie często
+                pos = new Vector3(Random.Range(-92, 92), Random.Range(-21, -11), 0);
+            }
+
+            string name = prefabs_names[Random.Range(0, prefabs_names.Length)];
+            spawned = (GameObject)Instantiate(Resources.Load("Prefabs/" + name), pos, Quaternion.identity);
+            people_number++;
+            Debug.Log(people_number);
+
+        }
+
+    }
+
+    
 }
