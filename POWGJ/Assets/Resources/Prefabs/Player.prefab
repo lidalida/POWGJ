@@ -21,10 +21,10 @@ GameObject:
   - 4: {fileID: 4000011350997220}
   - 212: {fileID: 212000011847361512}
   - 50: {fileID: 50000014245266986}
+  - 114: {fileID: 114000014064762466}
   - 58: {fileID: 58000014130806124}
   - 61: {fileID: 61000013635307904}
   - 95: {fileID: 95000011727642880}
-  - 114: {fileID: 114000011917134932}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010951267880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.67554, y: -22.45346, z: 0}
+  m_LocalPosition: {x: -65.7, y: -30.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -53,7 +53,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010951267880}
   m_UseAutoMass: 0
-  m_Mass: 1000000
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -107,7 +107,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000011917134932
+--- !u!114 &114000014064762466
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,9 +115,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010951267880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9648cca22c9dbe47a4e003ab93f83c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 81f80a69451739d45af7b2735abee2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
 --- !u!212 &212000011847361512
 SpriteRenderer:
   m_ObjectHideFlags: 1
