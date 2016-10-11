@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour {
 
     public int points;
     public int lifes;
-    List<Transform> polygonians;
+    public List<Transform> polygonians;
 	
 	// Update is called once per frame
 	void Update () {

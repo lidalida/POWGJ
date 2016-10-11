@@ -57,10 +57,34 @@ public class PlayerController : MonoBehaviour {
         {
             if (other.gameObject.tag == "People")
             {
-                Destroy(other.gameObject);
-                controller.GetComponent<GameController>().points += 10;
+                if(!other.gameObject.GetComponent<FSM>().isPolygon)
+                {
+                    Destroy(other.gameObject);
+                    controller.GetComponent<GameController>().points += 10;
+                }
+                else
+                {
+                    GetComponent<PlayerController>().enabled = false;
+                    GetComponent<Rigidbody2D>().isKinematic = true;
+                    controller.GetComponent<GameController>().wasted.gameObject.SetActive(true);
+                }
+                
             }
                 
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (other.gameObject.tag == "People")
+            {
+                if (other.gameObject.GetComponent<FSM>().isPolygon)
+                {
+                    controller.GetComponent<GameController>().polygonians.Add(other.gameObject.transform);
+                    other.gameObject.transform.position = new Vector3(-57f,10f,0);
+                    controller.GetComponent<GameController>().points += 100;
+                }
+
+            }
+
         }
     }
 }

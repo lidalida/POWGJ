@@ -11,6 +11,7 @@ public class FSM : MonoBehaviour {
     public Vector3 lastPos;
     Transform Player;
     Transform controller;
+    public bool isPolygon;
 
     void Start()
     {
@@ -19,6 +20,15 @@ public class FSM : MonoBehaviour {
         StartCoroutine(MyCoroutine());
         Player = GameObject.Find("Player").transform;
         controller = GameObject.Find("GameController").transform;
+        if (Random.Range(0f, 100f) > 50f)
+        {
+            isPolygon = true;
+            Quaternion rot = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180f);
+            GameObject pol = (GameObject)Instantiate(Resources.Load("Prefabs/Polygon"), transform.position-Vector3.left*(-0.035f)+Vector3.up*(0.017f), rot);
+            pol.transform.parent = transform;
+        }
+        else
+            isPolygon = false;
     }
 	
     IEnumerator MyCoroutine()
@@ -60,7 +70,10 @@ public class FSM : MonoBehaviour {
 
         if (/*Random.Range(0f,100f)>90 &&*/ Vector3.Distance(transform.position, Player.transform.position) < 10f)
         {
-            actualState = Follow;
+            if (!isPolygon)
+                actualState = Follow;
+            else
+                actualState = Stay;
             yield return new WaitForSeconds(0.001f);
         }
 
@@ -81,7 +94,10 @@ public class FSM : MonoBehaviour {
         {
             GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
             GetComponent<Animator>().SetBool("IsMoving", false);
-            actualState = Follow;
+            if (!isPolygon)
+                actualState = Follow;
+            else
+                actualState = Stay;
             i = 0;
         }
 

@@ -43,12 +43,12 @@ public class NietupController : MonoBehaviour {
             GetComponent<Animator>().SetBool("IsMoving", false);
             transform.rotation = Quaternion.Euler(0f,0f,180f);
         }
-        if(act2)
+        /*if(act2)
         {
             controller.GetComponent<GameController>().Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             controller.GetComponent<GameController>().Player.GetComponent<Animator>().SetBool("IsMoving", false);
             controller.GetComponent<GameController>().Player.GetComponent<PlayerController>().enabled = false;
             Time.timeScale = 0;
-        }
+        }*/
     }
 }

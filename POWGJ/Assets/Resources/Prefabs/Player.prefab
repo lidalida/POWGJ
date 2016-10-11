@@ -25,6 +25,7 @@ GameObject:
   - 58: {fileID: 58000014130806124}
   - 61: {fileID: 61000013635307904}
   - 95: {fileID: 95000011727642880}
+  - 68: {fileID: 68000011684965720}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010951267880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -65.7, y: -30.7, z: 0}
+  m_LocalPosition: {x: -61.01, y: -21.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -90,6 +91,24 @@ BoxCollider2D:
   m_Offset: {x: -0.04, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.87, y: 0.3}
+--- !u!68 &68000011684965720
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010951267880}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -0.37392426, y: 0.19039345}
+  - {x: -0.65683365, y: 0.84111786}
+  - {x: 0.5686798, y: 0.83618736}
+  - {x: 0.30405807, y: 0.17903519}
+  - {x: -0.36963272, y: 0.19296646}
 --- !u!95 &95000011727642880
 Animator:
   serializedVersion: 3
@@ -119,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  controller: {fileID: 0}
 --- !u!212 &212000011847361512
 SpriteRenderer:
   m_ObjectHideFlags: 1
