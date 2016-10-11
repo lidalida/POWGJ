@@ -25,9 +25,10 @@ GameObject:
   - 61: {fileID: 61000010049105910}
   - 95: {fileID: 95000013374025000}
   - 114: {fileID: 114000011136137208}
+  - 114: {fileID: 114000014002987582}
   m_Layer: 0
   m_Name: Boy2_blue
-  m_TagString: Untagged
+  m_TagString: People
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +119,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9648cca22c9dbe47a4e003ab93f83c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000014002987582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011372643824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1104cdd244dac2a4da40b3e951400c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  i: 0
+  dest: {x: 0, y: 0, z: 0}
+  dir: {x: 0, y: 0, z: 0}
+  lastPos: {x: 0, y: 0, z: 0}
 --- !u!212 &212000012111949446
 SpriteRenderer:
   m_ObjectHideFlags: 1

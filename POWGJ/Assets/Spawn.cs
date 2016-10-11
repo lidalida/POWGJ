@@ -5,17 +5,17 @@ using System.Collections.Generic;
 public class Spawn : MonoBehaviour {
 
     GameObject spawned;
-    List<GameObject> list;
+    //List<GameObject> list;
     string[] prefabs_names = {"Afro_green", "Afro_red", "Boy1_brown", "Boy1_green", "Boy2_blue", "Boy2_green", "Boy2_white", "Girl_blue", "Girl_pink", "Ponytail_blue", "Ponytail_orange", "Professor"};
     public int people_number = 0;
-    public int max_people_number=1000;
+    public int max_people_number=100;
 	// Use this for initialization
 	void Start () {
-        list = new List<GameObject>();
+        //list = new List<GameObject>();
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 300; i++)
             SingleSpawn();
-        
+
         InvokeRepeating("SingleSpawn", 0.1f, 3f);
              
 
@@ -79,7 +79,7 @@ public class Spawn : MonoBehaviour {
             string name = prefabs_names[Random.Range(0, prefabs_names.Length)];
             spawned = (GameObject)Instantiate(Resources.Load("Prefabs/" + name), pos, Quaternion.identity);
             people_number++;
-            Debug.Log(people_number);
+            //Debug.Log(people_number);
 
         }
 

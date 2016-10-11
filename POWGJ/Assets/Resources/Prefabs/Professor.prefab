@@ -25,9 +25,10 @@ GameObject:
   - 61: {fileID: 61000011067255098}
   - 95: {fileID: 95000012461735724}
   - 114: {fileID: 114000014100346352}
+  - 114: {fileID: 114000010555019164}
   m_Layer: 0
   m_Name: Professor
-  m_TagString: Untagged
+  m_TagString: People
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +108,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010555019164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010695556980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1104cdd244dac2a4da40b3e951400c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  i: 0
+  dest: {x: 0, y: 0, z: 0}
+  dir: {x: 0, y: 0, z: 0}
+  lastPos: {x: 0, y: 0, z: 0}
 --- !u!114 &114000014100346352
 MonoBehaviour:
   m_ObjectHideFlags: 1

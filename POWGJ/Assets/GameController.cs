@@ -5,8 +5,10 @@ using System.Collections.Generic;
 public class GameController : MonoBehaviour {
     public Transform canvas;
     public Transform Player;
+    public Transform wasted;
 
     public int points;
+    public int lifes;
     List<Transform> polygonians;
 	
 	// Update is called once per frame
@@ -28,8 +30,5 @@ public class GameController : MonoBehaviour {
                 Time.timeScale = 1;
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            points += 10;
 	}
 }
