@@ -17,7 +17,8 @@ public class NietupController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Text.GetComponent<Text>().text = "Siemanko " + GameObject.Find("Manager").GetComponent<GUIController>().PlayerName +",\n\nMamy problem, w całej Warszawie internet nie działa, przez strajk szympansów. Jest 5 października dzień spotkania Koła, a kołowicze wciąż nie wiedzą gdzie i o której się dzisiaj spotykamy.Twoim zadaniem jest znaleźć i poinformować jak największą liczbę Polygonków o terminie dzisiejszego spotkania. Poznasz ich bez trudu, dobrze wyróżniają się w tłumie."; 
+        if (GameObject.Find("Manager")!=null)
+            Text.GetComponent<Text>().text = "Siemanko " + GameObject.Find("Manager").GetComponent<GUIController>().PlayerName +",\n\nMamy problem, w całej Warszawie internet nie działa przez strajk szympansów. Jest 5 października, dzień spotkania Koła, a kołowicze wciąż nie wiedzą gdzie i o której się dzisiaj spotykamy.Twoim zadaniem jest znaleźć i poinformować jak największą liczbę Polygonków o terminie dzisiejszego spotkania. Poznasz ich bez trudu, dobrze wyróżniają się w tłumie."; 
         controller.GetComponent<GameController>().canvas.gameObject.SetActive(true);
         Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         Player.GetComponent<Animator>().SetBool("IsMoving", false);
