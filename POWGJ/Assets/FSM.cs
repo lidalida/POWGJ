@@ -20,7 +20,7 @@ public class FSM : MonoBehaviour {
         StartCoroutine(MyCoroutine());
         Player = GameObject.Find("Player").transform;
         controller = GameObject.Find("GameController").transform;
-        if (Random.Range(0f, 100f) > 70f)
+        if (Random.Range(0f, 100f) > 0f)
         {
             isPolygon = true;
             Quaternion rot = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180f);

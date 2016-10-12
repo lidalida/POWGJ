@@ -1195,8 +1195,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1189534380}
   - {fileID: 2063720387}
+  - {fileID: 1189534380}
   - {fileID: 2114367443}
   m_Father: {fileID: 2070024702}
   m_RootOrder: 0
@@ -1439,6 +1439,31 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011224946910, guid: bb25687176d1ccc47a415ae02e27dee0,
+        type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 837248096}
+    - target: {fileID: 114000011224946910, guid: bb25687176d1ccc47a415ae02e27dee0,
+        type: 2}
+      propertyPath: Doors1
+      value: 
+      objectReference: {fileID: 1776151699}
+    - target: {fileID: 114000011224946910, guid: bb25687176d1ccc47a415ae02e27dee0,
+        type: 2}
+      propertyPath: Doors2
+      value: 
+      objectReference: {fileID: 1126598419}
+    - target: {fileID: 114000011224946910, guid: bb25687176d1ccc47a415ae02e27dee0,
+        type: 2}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 413031579}
+    - target: {fileID: 114000011224946910, guid: bb25687176d1ccc47a415ae02e27dee0,
+        type: 2}
+      propertyPath: Text
+      value: 
+      objectReference: {fileID: 1033210055}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb25687176d1ccc47a415ae02e27dee0, type: 2}
   m_IsPrefabParent: 0
@@ -1680,7 +1705,7 @@ GameObject:
   - 222: {fileID: 1033210057}
   - 114: {fileID: 1033210056}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextNietup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1737,9 +1762,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\rSiemanko Nick,\r\n\r\nMamy problem, w ca\u0142ej Warszawie internet nie
-    dzia\u0142a, przez strajk szympans\xF3w, jest 5 pa\u017Adziernika dzie\u0144 spotkania
+    dzia\u0142a, przez strajk szympans\xF3w. Jest 5 pa\u017Adziernika dzie\u0144 spotkania
     Ko\u0142a, a ko\u0142owicze wci\u0105\u017C nie wiedz\u0105 gdzie i o kt\xF3rej
-    si\u0119 dzisiaj spotykamy. Twoim zadaniem jest znale\u017A\u0107 jest poinformowa\u0107
+    si\u0119 dzisiaj spotykamy. Twoim zadaniem jest znale\u017A\u0107 i poinformowa\u0107
     jak najwi\u0119ksz\u0105 liczb\u0119 Polygonk\xF3w o terminie dzisiejszego spotkania.
     Poznasz ich bez trudu, dobrze wyr\xF3\u017Cniaj\u0105 si\u0119 w t\u0142umie."
 --- !u!222 &1033210057
@@ -1981,7 +2006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 699947300}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2390,6 +2415,8 @@ GameObject:
   - 68: {fileID: 1397967159}
   - 61: {fileID: 1397967158}
   - 61: {fileID: 1397967157}
+  - 68: {fileID: 1397967162}
+  - 68: {fileID: 1397967161}
   m_Layer: 0
   m_Name: Sciany
   m_TagString: Untagged
@@ -2891,6 +2918,42 @@ EdgeCollider2D:
   - {x: -67.54252, y: -6.6746464}
   - {x: -67.820595, y: -6.676306}
   - {x: -67.81631, y: -6.1757517}
+--- !u!68 &1397967161
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1397967153}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 63.543404, y: -40.3757}
+  - {x: 63.55123, y: -40.82303}
+  - {x: 58.224854, y: -40.837414}
+  - {x: 58.23359, y: -40.36511}
+  - {x: 63.50461, y: -40.331512}
+--- !u!68 &1397967162
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1397967153}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -63.429432, y: -40.84236}
+  - {x: -63.42865, y: -40.387733}
+  - {x: -58.564323, y: -40.386288}
+  - {x: -58.585606, y: -40.870087}
+  - {x: -63.422806, y: -40.8664}
 --- !u!1001 &1436583815
 Prefab:
   m_ObjectHideFlags: 0
@@ -3057,7 +3120,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 34ce64da789a0884cb4157bf4dd2d4c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3314,7 +3377,7 @@ GameObject:
   - 222: {fileID: 1953846287}
   - 114: {fileID: 1953846286}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextWasted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3514,7 +3577,7 @@ RectTransform:
   m_Children:
   - {fileID: 1033210055}
   m_Father: {fileID: 699947300}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -284}
