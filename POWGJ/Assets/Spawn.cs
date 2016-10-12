@@ -18,7 +18,13 @@ public class Spawn : MonoBehaviour {
 
         InvokeRepeating("SingleSpawn", 0.1f, 3f);
              
-
+        /*for(int i =0; i<14;i++)
+            for(int j = 0; j < 20; j++)
+            {
+                string name = prefabs_names[Random.Range(0, prefabs_names.Length)];
+                spawned = (GameObject)Instantiate(Resources.Load("Prefabs/" + name), new Vector3(-54.51548f - i * 1.01285f, -3.97598f + j*1.026f, 0), Quaternion.identity);
+                spawned.GetComponent<FSM>().enabled = false;
+            }*/
         
 	
 	}

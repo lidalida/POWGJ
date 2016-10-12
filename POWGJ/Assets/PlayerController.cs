@@ -1,17 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
 
     public int speed = 3;
     public Transform controller;
-	// Use this for initialization
-	void Start () {
+    List<Vector3> positions;
+    // Use this for initialization
+    void Start () {
         GetComponent<Animator>().SetBool("IsMoving", false);
 
-        
-	
-	}
+        positions = new List<Vector3>();
+
+        for (int i = 0; i < 14; i++)
+            for (int j = 0; j < 20; j++)
+            {
+                positions.Add(new Vector3(-54.51548f - i * 1.01285f, -3.97598f + j * 1.026f, 0));
+            }
+
+        for(int i=0; i<positions.Count;i++)
+        {
+            int k, l;
+            k = Random.Range(0, positions.Count);
+            l = Random.Range(0, positions.Count);
+            Vector3 tmp;
+            tmp = positions[k];
+            positions[k] = positions[l];
+            positions[l] = tmp;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -79,7 +97,12 @@ public class PlayerController : MonoBehaviour {
                 if (other.gameObject.GetComponent<FSM>().isPolygon)
                 {
                     controller.GetComponent<GameController>().polygonians.Add(other.gameObject.transform);
-                    other.gameObject.transform.position = new Vector3(-57f,10f,0);
+                    other.gameObject.transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                    other.gameObject.transform.GetComponent<Animator>().SetBool("IsMoving", false);
+                    other.gameObject.transform.rotation = new Quaternion(0,0,0,0);
+                    other.gameObject.transform.GetComponent<FSM>().StopAllCoroutines();
+                    other.gameObject.transform.position = positions[0];
+                    positions.RemoveAt(0);
                     controller.GetComponent<GameController>().points += 100;
                 }
 

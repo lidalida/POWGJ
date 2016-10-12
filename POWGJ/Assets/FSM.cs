@@ -4,7 +4,7 @@ using System.Collections;
 public class FSM : MonoBehaviour {
 
     public delegate IEnumerator Delegate();
-    Delegate actualState;
+    public Delegate actualState;
     public int i = 0;
     public Vector3 dest;
     public Vector3 dir;
@@ -20,7 +20,7 @@ public class FSM : MonoBehaviour {
         StartCoroutine(MyCoroutine());
         Player = GameObject.Find("Player").transform;
         controller = GameObject.Find("GameController").transform;
-        if (Random.Range(0f, 100f) > 50f)
+        if (Random.Range(0f, 100f) > 70f)
         {
             isPolygon = true;
             Quaternion rot = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180f);
@@ -39,6 +39,11 @@ public class FSM : MonoBehaviour {
             yield return actualState();
         }
         
+    }
+
+    IEnumerator DoNotMove()
+    {
+        yield return new WaitForSeconds(10000f);
     }
 
     IEnumerator Stay()
@@ -115,7 +120,7 @@ public class FSM : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = dir;
         GetComponent<Animator>().SetBool("IsMoving", true);
 
-        if(Vector3.Distance(transform.position, Player.transform.position)<1f)
+        if(Vector3.Distance(transform.position, Player.transform.position)<0.8f)
             actualState = Attack;
         //Debug.Log("Running running, -ning");
         yield return new WaitForSeconds(0.1f);
